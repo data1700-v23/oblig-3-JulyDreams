@@ -69,7 +69,7 @@ function regBilett(){
 
 }
 
-function hentAlle(){ //funcksjonen kaller server metoden /hentAlle
+function hentAlle(){ //funksjonen kaller server metoden /hentAlle
     $.post("/hentAlle", function (data){ //varibelen data mottar data fra server
         formaterData(data); //kaller på funksjonen formaterData()
     });
