@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Bestilling av Kinobiletter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="Oblig3.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1><b>Bestilling av kinobiletter</b></h1>
+    <div class="col-md-5">
+        <form class="form">
+            <div class="form-group">
+                <label for="velgfilm">Velg film</label>
+                <select id="velgfilm" class="form-control" placeholder="velg film her">
+                    <option value="Velg film her">Velg film her</option>
+                    <option value="Alladin">Alladin</option>
+                    <option value="Sing">Sing</option>
+                    <option value="Catch me if you can">Catch me if you can</option>
+                    <option value="Plane">Plane</option>
+                    <option value="Don't look up"> Don't look up</option>
+                </select>
+                <span id="feilVelgFilm"></span>
+            </div>
+            <div class="form-group">
+                <label for="antall">Antall</label>
+                <input type="text" id="antall" class="form-control"/>
+                <span id="feilAntall"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="fornavn">Fornavn</label>
+                <input type="text" id="fornavn" class="form-control"/>
+                <span id="feilFornavn"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="etternavn">Etternavn</label>
+                <input type="text" id="etternavn" class="form-control"/>
+                <span id="feilEtternavn"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="telefonnr">Telefonnummer</label>
+                <input class="form-control" type="text" id="telefonnr">
+                <span id="feilTelefonnr"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="epost">Epost</label>
+                <input type="email" id="epost" placeholder="Skriv epostadressen din her" class="form-control">
+                <span id="feilEpost"></span>
+            </div>
+
+        </form>
+        <br>
+        <button class="btn btn-success" onclick="regBilett()">Kjøp bilett</button>
+        <h2><b>Alle billetter</b></h2>
+        <span id="alleBillettene"></span>
+        <button class="btn btn-danger" onclick="slettAlt()">Slett alle billettene</button>
+    </div>
+</div>
+</body>
+</html>
